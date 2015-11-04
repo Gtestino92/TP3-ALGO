@@ -64,7 +64,7 @@ operation_status_t inicializarStructOperation(operation_t ** oper ){
 operation_status_t rezizeStructOperation(operation_t **oper,size_t *size){
     
 
-    (*oper)=(operation_t *)realloc((*oper),sizeof(*oper)*1);
+    (*oper)=(operation_t *)realloc((*oper),sizeof(operation_t)*((*size)+1);
     
     /* pido memoria para cada bignum_t */
     if( !(oper[*size]->op1=(bignum_t *)malloc( sizeof(bignum_t) )) )
